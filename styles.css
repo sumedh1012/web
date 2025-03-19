@@ -10,8 +10,9 @@ body {
 
 /* Header Styles */
 header {
-    background-color: green; /* Dark background for the header */
+    background-color: #oo7BFF; /* Dark background for the header */
     color: white;
+    position: relative;
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for the header */
@@ -453,7 +454,7 @@ footer {
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 2em;
+        font-size: 1.6em;
     }
 
     nav ul {
@@ -466,7 +467,7 @@ footer {
     }
 
     .hero h2 {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
 
     .hero p {
