@@ -10,7 +10,7 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #oo7BFF; /* Dark background for the header */
+    background-color: #007BFF; /* Dark background for the header */
     color: white;
     position: relative;
     padding: 20px 0;
@@ -28,7 +28,7 @@ header .logo h1 {
 nav {
     background-color: #1ad9c4;
     padding: 1px;
-    position: sticky;
+    position: relative;
     top: 0; /* Sticky navigation */
     z-index: 10; /* Ensure it stays on top */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for the nav bar */
