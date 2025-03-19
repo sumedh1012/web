@@ -1,0 +1,430 @@
+/* Global Styles */
+body {
+    font-family:Rubik;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #331; /* Dark background for the header */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for the header */
+}
+
+/* Logo in Header */
+header .logo h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+nav {
+    background-color: #1ad9c4;
+    padding: 1px;
+    position: sticky;
+    top: 0; /* Sticky navigation */
+    z-index: 10; /* Ensure it stays on top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for the nav bar */
+}
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    padding: 10px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 40px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #FFD700;
+    bottom: -5px;
+    left: 30%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Center the images vertically */
+    flex-direction: column; /* Stack images and dots vertically */
+}
+/* Individual Slide Styles */
+.mySlides {
+    display: none;
+    text-align: center;
+}
+
+.mySlides img {
+    width: 500px; /* Fixed width for images */
+    height: 300px; /* Fixed height for images */
+    object-fit: cover; /* Ensure images cover the space while maintaining aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect around the image */
+    transition: transform 0.5s ease; /* Smooth transition for scaling effect */
+}
+
+/* Add scale effect when image is hovered */
+.mySlides img:hover {
+    transform: scale(1.03); /* Slightly enlarge the image on hover */
+}
+
+/* Dots for Navigation */
+.dot-container {
+    text-align: center; /* Center the dots below the images */
+    padding: 10px;
+    margin-top: 10px; /* Ensure some space between images and dots */
+}
+.dot {
+    height: 15px; /* Size of the dots */
+    width: 15px; /* Size of the dots */
+    margin: 0 6px; /* Space between dots */
+    background-color: #bbb; /* Grey color for inactive dots */
+    border-radius: 50%; /* Make the dots circular */
+    display: inline-block;
+    transition: background-color 0.6s ease; /* Smooth transition for active dots */
+    cursor: pointer;
+}
+/* Active Dot */
+.active {
+    background-color: #717171; /* Darker color for the active dot */
+}
+
+
+/* Product List */
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.product {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.product h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+/* Category Cards */
+.product-categories {
+    margin-top: 40px;
+}
+
+.category-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.category-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 22%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.category-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Featured Products */
+.featured-products {
+    margin-top: 40px;
+}
+
+.product-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 22%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-card button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Grocery Items Section */
+.grocery-list {
+    margin-top: 40px;
+}
+
+.grocery-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.grocery-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 22%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.grocery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.grocery-item h4 {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .product-list, .category-cards, .product-cards, .grocery-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+.product, .product-card, .category-card, .grocery-item {
+        width: 80%;
+   
+}}
+
+.inquiry-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.inquiry-form h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Contact Info Section */
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.contact-info div {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.contact-info h3 {
+    font-size: 1.5em;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info div {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .inquiry-form iframe {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background-color: #007BFF;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.menu-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 200px;
+}
+
+.menu-item h3 {
+    font-size: 1.5em;
+    margin: 15px 0 10px;
+}
+
+.menu-item p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.order-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.order-btn:hover {
+    background-color: #FFD700;
+}
+
+/* Footer */
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        grid-template-columns: 1fr;
+    }
+}
+/* Footer Section */
+footer {
+    background-color: #F47B4F;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1em;
+}
