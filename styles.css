@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
+	box-sizing: border-box
 }
 
 /* Header Styles */
@@ -339,6 +340,7 @@ nav ul li a:hover::after {
     margin-top: 10px;
 }
 
+
 .menu {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -413,6 +415,98 @@ footer {
 @media (max-width: 480px) {
     .menu {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    .menu {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    .menu-item h3 {
+        font-size: 1.3em;
+    }
+
+    .menu-item p {
+        font-size: 1em;
+    }
+
+    .order-btn {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .menu-item {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .menu-item h3 {
+        font-size: 1.3em;
+    }
+
+    .menu-item p {
+        font-size: 1em;
+    }
+
+    .order-btn {
+        font-size: 1.1em;
+        padding: 10px 20px;
+    }
+
+    .contact-info {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .contact-info div {
+        margin-bottom: 10px;
+    }
+
+    .inquiry-form iframe {
+        height: 400px;
     }
 }
 /* Footer Section */
