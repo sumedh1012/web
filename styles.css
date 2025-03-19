@@ -10,7 +10,7 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #331; /* Dark background for the header */
+    background-color: green; /* Dark background for the header */
     color: white;
     padding: 20px 0;
     text-align: center;
