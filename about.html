@@ -3,40 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Supermarket Store</title>
+    <title>About Us - Sainik Canteen Akola</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
+  <header>
         <div class="logo">
-            <h1>SuperMarket Store</h1>
+		<img src="https://vishwabharatigurukul.com/wp-content/uploads/2021/05/Indian-Army-Soldier.jpg" alt="SuperMarket Store Logo" class="logo-img">
+            <h1>Sainik Canteen Akola</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="canteen.html">Canteen</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+
+        <!-- Hamburger Menu -->
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </header>
+
+    <!-- Navigation Section -->
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+			<li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
     <!-- About Us Section -->
     <main>
-        <div class="about">
+        <div class="hero">
+			<p><br><br></p>
             <h2>About Us</h2>
             <p>We are a local supermarket providing fresh produce, groceries, and a variety of everyday essentials to our customers.</p>
             <p>Our store is dedicated to offering high-quality products at affordable prices. We also have an on-site canteen offering delicious meals.</p>
-        </div>
+			<p><br><br><br></p>
+		</div>
     </main>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 SuperMarket Store. All rights reserved.</p>
     </footer>
+	<script src="scripts.js"></script>
 
 </body>
 </html>

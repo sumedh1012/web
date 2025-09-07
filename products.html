@@ -3,133 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products</title>
+    <title>Supermarket Store - Home</title>
     <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="s.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <div class="logo">
-            <h1>Supermarket Store</h1>
+		<img src="https://vishwabharatigurukul.com/wp-content/uploads/2021/05/Indian-Army-Soldier.jpg" alt="SuperMarket Store Logo" class="logo-img">
+            <h1>Sainik Canteen Akola</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="canteen.html">Canteen</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
+
+        <!-- Hamburger Menu -->
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </header>
 
-    <main>
-        <h2>Our Products</h2>
+    <!-- Navigation Section -->
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+   			<li><a href="products.html">Products</a></li>  
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>  
+		</ul>
+    </nav>
 
-        <!-- Product List Section -->
-        <section class="product-list">
-            <div class="product">
-                <h3>Apple</h3>
-                <p>Fresh and juicy apples. ₹299 per kg</p>
-            </div>
-            <div class="product">
-                <h3>Milk</h3>
-                <p>Organic milk. ₹149 per liter</p>
-            </div>
-            <div class="product">
-                <h3>Bread</h3>
-                <p>Freshly baked bread. ₹100 per loaf</p>
-            </div>
-        </section>
+    <div class="container">
+        <div class="categories">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="#" class="category" data-category="pulses">Pulses</a></li>
+                <li><a href="#" class="category" data-category="spices">Spices</a></li>
+                <li><a href="#" class="category" data-category="daily-needs">Daily Needs</a></li>
+                <li><a href="#" class="category" data-category="cleaning">Cleaning</a></li>
+                <li><a href="#" class="category" data-category="household">Household</a></li>
+                <li><a href="#" class="category" data-category="fruits">Fruits</a></li>
+                <li><a href="#" class="category" data-category="vegetables">Vegetables</a></li>
+                <li><a href="#" class="category" data-category="beverages">Beverages</a></li>
+                <li><a href="#" class="category" data-category="snacks">Snacks</a></li>
+                <li><a href="#" class="category" data-category="dairy">Dairy</a></li>
+            </ul>
+        </div>
 
-        <!-- Product Categories -->
-        <section class="product-categories">
-            <h3>Shop by Categories</h3>
-            <div class="category-cards">
-                <div class="category-card">
-                    <img src="images/fruits.jpg" alt="Fruits">
-                    <p>Fruits</p>
-                </div>
-                <div class="category-card">
-                    <img src="images/vegetables.jpg" alt="Vegetables">
-                    <p>Vegetables</p>
-                </div>
-                <div class="category-card">
-                    <img src="images/dairy.jpg" alt="Dairy">
-                    <p>Dairy</p>
-                </div>
-                <div class="category-card">
-                    <img src="images/snacks.jpg" alt="Snacks">
-                    <p>Snacks</p>
-                </div>
+        <div class="products">
+            <h2>Products</h2>
+            <div id="product-container">
+                <!-- Products will be loaded here dynamically based on category -->
             </div>
-        </section>
+        </div>
+    </div>
 
-        <!-- Featured Products Section -->
-        <section class="featured-products">
-            <h3>Featured Products</h3>
-            <div class="product-cards">
-                <div class="product-card">
-                    <img src="images/apple.jpg" alt="Apple">
-                    <h4>Fresh Apples</h4>
-                    <p>₹299</p>
-                    <button class="btn">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="images/milk.jpg" alt="Milk">
-                    <h4>Organic Milk</h4>
-                    <p>₹149</p>
-                    <button class="btn">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="images/chips.jpg" alt="Chips">
-                    <h4>Potato Chips</h4>
-                    <p>₹199</p>
-                    <button class="btn">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="images/bread.jpg" alt="Bread">
-                    <h4>Whole Wheat Bread</h4>
-                    <p>₹250</p>
-                    <button class="btn">Add to Cart</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Grocery Items Section -->
-        <section class="grocery-list">
-            <h3>Grocery Items</h3>
-            <div class="grocery-items">
-                <div class="grocery-item">
-                    <img src="images/rice.jpg" alt="Rice">
-                    <h4>Organic Rice</h4>
-                    <p>₹499 per kg</p>
-                </div>
-                <div class="grocery-item">
-                    <img src="images/eggs.jpg" alt="Eggs">
-                    <h4>Fresh Eggs</h4>
-                    <p>₹249 per dozen</p>
-                </div>
-                <div class="grocery-item">
-                    <img src="images/pasta.jpg" alt="Pasta">
-                    <h4>Italian Pasta</h4>
-                    <p>₹189 per pack</p>
-                </div>
-                <div class="grocery-item">
-                    <img src="images/olive_oil.jpg" alt="Olive Oil">
-                    <h4>Olive Oil</h4>
-                    <p>₹699 per bottle</p>
-                </div>
-                <div class="grocery-item">
-                    <img src="images/tomato.jpg" alt="Tomato">
-                    <h4>Fresh Tomatoes</h4>
-                    <p>₹199 per kg</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Supermarket Store. All rights reserved.</p>
-    </footer>
+    <script src="j.js"></script>
+	<script src="scripts.js"></script>
 </body>
+    <footer>
+        <p>&copy; 2025 SuperMarket Store. All rights reserved.</p>
+    </footer>
 </html>

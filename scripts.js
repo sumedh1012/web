@@ -1,7 +1,16 @@
+
+
+
+
+const menuIcon = document.querySelector('.menu-icon');
+const nav = document.querySelector('nav');
+
+menuIcon.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
+
 let slideIndex = 0;
 showSlides(slideIndex);
-
-// Function to show slides
 function showSlides(n) {
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
@@ -46,3 +55,28 @@ for (let i = 0; i < dots.length; i++) {
         currentSlide(i);
     });
 }
+function toggleList(listId) {
+    var list = document.getElementById(listId);
+
+    // If the list is already open, close it
+    if (list.classList.contains('show')) {
+        list.classList.remove('show');
+    } else {
+        // Close all other lists first
+        var allLists = document.querySelectorAll('.grocery-list-items');
+        allLists.forEach(function (otherList) {
+            otherList.classList.remove('show');
+        });
+
+        // Show the selected list
+        list.classList.add('show');
+    }
+}
+    // Wait for the page to fully load
+    window.onload = function () {
+        // Add a class 'loaded' to the body tag when the page is fully loaded
+        document.body.classList.add('loaded');
+    };
+
+
+

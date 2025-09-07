@@ -1,0 +1,135 @@
+
+.container {
+    display: flex;
+    max-width: 100;
+
+}
+
+.categories {
+    width: 20%;
+    padding-left: 25px;
+    background-color: #113;
+    color: white;
+    height: auto;
+    box-shadow: 0px 0px px rgba(0, 0, 0, 0.1);
+}
+
+.categories h2 {
+    text-align: left;
+	padding-left:0px;
+    margin-bottom: 10px;
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categories ul li {
+    margin: 10px 0;
+}
+
+.categories ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.categories ul li a:hover {
+    background-color: #555;
+}
+
+.products {
+    width: 80%;
+    padding: 20px;
+    background-color: #fff;
+}
+
+#product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusts columns based on screen size */
+    gap: 20px;
+}
+
+.product {
+    background-color: #f9f9f9;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 150px;
+    height: 150px;
+	margin-bottom:10px;
+    border-radius: 100px;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 16px;
+    color: #888;
+}
+
+.product .price {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+.product:hover {
+    transform: translateY(-5px); /* Slightly lift the card */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Enhance the shadow */
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .categories {
+        width: 100%; /* Full width for smaller screens */
+        height: auto;
+        padding: 15px;
+        box-shadow: none;
+        position: relative;
+    }
+
+    .products {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #product-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 2 or more products per row based on screen size */
+    }
+}
+
+/* Small Screen Styles */
+@media (max-width: 480px) {
+    .categories ul li a {
+        font-size: 16px; /* Smaller text size on small screens */
+    }
+
+    .categories {
+        width: 100%; /* Full width for small screens */
+        position: relative;
+        padding: 15px;
+    }
+
+    #product-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* 1 or more products per row on very small screens */
+    }
+
+    .product img {
+        width: 80%; /* Make images a bit smaller on small screens */
+    }
+}

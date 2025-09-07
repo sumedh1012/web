@@ -3,62 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canteen Information</title>
+    <title>Grocery List</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Header Section -->
     <header>
         <div class="logo">
-            <h1>Supermarket Store</h1>
+				<img src="https://vishwabharatigurukul.com/wp-content/uploads/2021/05/Indian-Army-Soldier.jpg" alt="SuperMarket Store Logo" class="logo-img">
+
+            <h1>Sainik Canteen Akola</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="canteen.html">Canteen</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
+
+        <!-- Hamburger Menu -->
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <section class="canteen-info">
-            <div class="hero">
-                <h2>Welcome to Our Canteen</h2>
-                <p>Our canteen offers a variety of meals and snacks to fuel your shopping spree.</p>
-            </div>
-            
-            <section class="menu">
-                <div class="menu-item">
-                    <img src="images/sandwich.jpg" alt="Sandwich" />
-                    <h3>Sandwich</h3>
-                    <p>Grilled sandwich with cheese and veggies. $4.99</p>
-                    <button class="order-btn">Order Now</button>
-                </div>
-                <div class="menu-item">
-                    <img src="images/pizza.jpg" alt="Pizza" />
-                    <h3>Pizza</h3>
-                    <p>Freshly baked pizza with various toppings. $7.99</p>
-                    <button class="order-btn">Order Now</button>
-                </div>
-                <div class="menu-item">
-                    <img src="images/coffee.jpg" alt="Coffee" />
-                    <h3>Coffee</h3>
-                    <p>Hot brewed coffee. $1.99</p>
-                    <button class="order-btn">Order Now</button>
-                </div>
-                <!-- Add more items as needed -->
-            </section>
-        </section>
-    </main>
+    <!-- Navigation Section -->
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+			<li><a href="canteen.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+<body>
+    <h1 class="grocery-title">Grocery List with Prices</h1>
 
-    <!-- Footer -->
+    <div class="grocery-list">
+        <!-- Categories container (Flex layout for proper arrangement) -->
+        <div class="category-container">
+            <!-- Pulses category with image -->
+            <div class="category-item">
+                <h2 class="grocery-category" onclick="toggleList('pulses-list')">
+                    <img src="https://ik.imagekit.io/lvn5j5ljp/wp-content/uploads/2023/08/Untitled-design-38.png" alt="Pulses">
+                    Pulses
+                </h2>
+                <!-- Pulses List -->
+                <ul id="pulses-list" class="grocery-list-items">
+                    <li>Lentils - <span class="price">₹60/kg</span></li>
+                    <li>Chickpeas - <span class="price">₹70/kg</span></li>
+                    <li>Black beans - <span class="price">₹90/kg</span></li>
+                    <li>Green gram - <span class="price">₹80/kg</span></li>
+                    <li>Red lentils - <span class="price">₹75/kg</span></li>
+                </ul>
+            </div>
+
+            <!-- Daily Needs category with image -->
+            <div class="category-item">
+                <h2 class="grocery-category" onclick="toggleList('daily-needs-list')">
+                    <img src="https://accountantlalaji.com/wp-content/uploads/2019/08/16.jpg" alt="Daily Needs">
+                    Daily Needs
+                </h2>
+                <!-- Daily Needs List -->
+                <ul id="daily-needs-list" class="grocery-list-items">
+                    <li>Milk - <span class="price">₹45/liter</span></li>
+                    <li>Eggs - <span class="price">₹60/dozen</span></li>
+                    <li>Bread - <span class="price">₹40/loaf</span></li>
+                    <li>Butter - <span class="price">₹120/250g</span></li>
+                    <li>Cheese - <span class="price">₹200/200g</span></li>
+                    <li>Sugar - <span class="price">₹40/kg</span></li>
+                </ul>
+            </div>
+
+            <!-- Spices category with image -->
+            <div class="category-item">
+                <h2 class="grocery-category" onclick="toggleList('spices-list')">
+                    <img src="https://via.placeholder.com/50?text=S" alt="Spices">
+                    Spices
+                </h2>
+                <!-- Spices List -->
+                <ul id="spices-list" class="grocery-list-items">
+                    <li>Cumin - <span class="price">₹50/100g</span></li>
+                    <li>Coriander powder - <span class="price">₹60/100g</span></li>
+                    <li>Chili powder - <span class="price">₹40/100g</span></li>
+                    <li>Turmeric - <span class="price">₹30/100g</span></li>
+                    <li>Garam masala - <span class="price">₹80/100g</span></li>
+                    <li>Cardamom - <span class="price">₹200/100g</span></li>
+                </ul>
+            </div>
+
+            <!-- Fruits and Vegetables category with image -->
+            <div class="category-item">
+                <h2 class="grocery-category" onclick="toggleList('fruits-veg-list')">
+                    <img src="https://via.placeholder.com/50?text=F" alt="Fruits and Vegetables">
+                    Fruits and Vegetables
+                </h2>
+                <!-- Fruits and Vegetables List -->
+                <ul id="fruits-veg-list" class="grocery-list-items">
+                    <li>Apples - <span class="price">₹120/kg</span></li>
+                    <li>Bananas - <span class="price">₹40/dozen</span></li>
+                    <li>Potatoes - <span class="price">₹30/kg</span></li>
+                    <li>Onions - <span class="price">₹40/kg</span></li>
+                    <li>Tomatoes - <span class="price">₹60/kg</span></li>
+                    <li>Carrots - <span class="price">₹50/kg</span></li>
+                </ul>
+            </div>
+
+            <!-- Snacks and Beverages category with image -->
+            <div class="category-item">
+                <h2 class="grocery-category" onclick="toggleList('snacks-beverages-list')">
+                    <img src="https://via.placeholder.com/50?text=N" alt="Snacks and Beverages">
+                    Snacks and Beverages
+                </h2>
+                <!-- Snacks and Beverages List -->
+                <ul id="snacks-beverages-list" class="grocery-list-items">
+                    <li>Chips - <span class="price">₹20/pack</span></li>
+                    <li>Biscuits - <span class="price">₹30/pack</span></li>
+                    <li>Tea - <span class="price">₹100/250g</span></li>
+                    <li>Coffee - <span class="price">₹200/100g</span></li>
+                </ul>
+            </div>
+
+            <!-- Other items category with image -->
+            <div class="category-item">
+                <h2 class="grocery-category" onclick="toggleList('others-list')">
+                    <img src="https://via.placeholder.com/50?text=O" alt="Others">
+                    Others
+                </h2>
+                <!-- Other items List -->
+                <ul id="others-list" class="grocery-list-items">
+                    <li>Toilet paper - <span class="price">₹50/pack</span></li>
+                    <li>Soap - <span class="price">₹30/bar</span></li>
+                    <li>Shampoo - <span class="price">₹150/200ml</span></li>
+                    <li>Cleaning supplies - <span class="price">₹100/pack</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
     <footer>
         <p>&copy; 2025 Supermarket Store. All rights reserved.</p>
     </footer>
+	<script src="scripts.js"></script>
 
-</body>
 </html>
